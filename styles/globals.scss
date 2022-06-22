@@ -2,8 +2,8 @@
 @import url("https://use.typekit.net/hjm2nts.css");
 
 /* ------------------------------ Variables ------------------------------ */
-$background: #001030;
-$purpleLight: #B584FD;
+$background: #000715;
+$navyBlue: #012160;
 $magenta: #D02670;
 $green: #40FC8B;
 $darkGrey: #21272A;
@@ -23,8 +23,8 @@ html {
 }
 
 body {
-  background: $background;
-  color: $midGrey;
+  background: $white;
+  color: $white;
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -86,49 +86,65 @@ a {
 }
 
 header {
+  height: 70px;
   position: fixed;
-  width: 100%;
-  height: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  z-index: 99;
 
   .parent {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
 
-    .logo {
-      grid-area: 1 / 1 / 2 / 3;
-      filter: invert(50%);
-      object-fit: scale-down;
-      object-position: left;
-      position: relative;
-      height: unset;
-    }
+  .logo {
+    position: relative;
+    width: 20vw;
+    padding: 0 3vw;
+  }
 
-    .menu {
-      grid-area: 1 / 4 / 2 / 11;
-      background: $white;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
+  .menu {
+    width: 70vw;
+    height: 100%;
+    background: $white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3vw;
 
-    .button {
-      grid-area: 1 / 11 / 2 / 13;
+    a {
+      color: $darkGrey;
+      padding-right: 2vw;
     }
   }
 
-  a {
-    color: $darkGrey;
-    padding-left: 2vw;
+  .button {
+    width: 10vw;
+    height: 100%;
+    border: none;
+    background: $navyBlue;
+    color: $white;
   }
 }
 
-main {
-  position: absolute;
-  margin-top: 200px;
+.content1 {
+  background: $background;
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content2 {
+  background: $white;
+  color: $darkGrey;
+  width: 100%;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;

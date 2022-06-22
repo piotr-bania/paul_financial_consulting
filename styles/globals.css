@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background: #001030;
-  color: #697077;
+  background: #FFFFFF;
+  color: #FFFFFF;
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -74,46 +74,60 @@ a:hover {
 }
 
 header {
+  height: 70px;
   position: fixed;
-  width: 100%;
-  height: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  z-index: 99;
 }
 header .parent {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
 }
-header .parent .logo {
-  grid-area: 1/1/2/3;
-  filter: invert(50%);
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  -o-object-position: left;
-     object-position: left;
+header .logo {
   position: relative;
-  height: unset;
+  width: 20vw;
+  padding: 0 3vw;
 }
-header .parent .menu {
-  grid-area: 1/4/2/11;
+header .menu {
+  width: 70vw;
+  height: 100%;
   background: #FFFFFF;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 0 3vw;
 }
-header .parent .button {
-  grid-area: 1/11/2/13;
-}
-header a {
+header .menu a {
   color: #21272A;
-  padding-left: 2vw;
+  padding-right: 2vw;
+}
+header .button {
+  width: 10vw;
+  height: 100%;
+  border: none;
+  background: #012160;
+  color: #FFFFFF;
 }
 
-main {
-  position: absolute;
-  margin-top: 200px;
+.content1 {
+  background: #000715;
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content2 {
+  background: #FFFFFF;
+  color: #21272A;
+  width: 100%;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
